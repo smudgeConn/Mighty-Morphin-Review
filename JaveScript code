@@ -1,0 +1,54 @@
+// *Variables*
+// Declare a variable, reassign it to your fav holiday, make sure it is in all caps, and print the value to the console
+
+let holiday = 'hALLoWEEN';
+console.log(holiday.toUpperCase());
+
+//Declare a variable, assign it a string, alert the last three characters in the string (Use your google-fu and the MDN)
+
+let string = 'Happy Birthday';
+alert(string[string.length-3] + string[string.length-2] + string[string.length-1]);
+
+
+// *Functions*
+// Create a function that takes in 5 numbers. Subtract all five from 100. Alert the absolute value of the difference. Call the function.
+
+function takeInFiveAndSubtractFrom100(a, b, c, d, e) {
+    alert(Math.abs(100-a-b-c-d-e))
+}
+takeInFiveAndSubtractFrom100 (1, 2, 3, 4, 5)
+
+// Create a function that takes in 3 numbers. Console log lowest and highest values. Call the function.
+
+function takeInThreeFindLowAndHigh(f, g, h) {
+    let low = Math.min(f, g, h);
+    let high = Math.max(f, g, h);
+    console.log( `The lowest number is ${low} and the highest number is ${high}`);
+}
+takeInThreeFindLowAndHigh(5, 10, 150);
+
+// *Conditionals*
+//Create a function that returns heads or tails randomly and as fairly as possible. Call the function.
+//function headsOrTails() {
+
+    // let n = Math.random();
+    // if (n.toFixed(2)*100 % 2 == 0) {
+    //     console.log("heads");
+    // } else if (n.toFixed(2)*100 % 2 != 0) {
+    //     console.log("tails");
+    // }
+//}
+
+const headsOrTails = _ => Math.random() < .5 ? 'heads' : 'tails';
+headsOrTails();
+
+//*Loops*
+//Create a function that takes in a number. Console log the result of heads or tails using the previous function x times where x is the number passed into the function. Call the function.
+
+function takeNumber(x) {
+    for (let i = 1; i < x; i++) {
+        let result = headsOrTails();
+        console.log(result);
+    }
+}
+takeNumber(3);
